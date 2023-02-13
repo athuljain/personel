@@ -303,7 +303,7 @@
             <div id="error">
 
             </div>
-      <button class="btn" type="submit">SUBMIT</button>            
+      <button class="btn" id="submit-btn" type="submit">SUBMIT</button>            
 
         </form>
 
@@ -325,7 +325,10 @@
 
 
 <script>
+    
     var text= document.querySelector('input').value;
+     var btn= document.querySelector('#submit-btn').value;
+    btn.addEventListener('click',function(){
     if(text!=''){
     $("#submit-form").submit((e)=>{
         e.preventDefault()
@@ -347,6 +350,7 @@
     }else{
         alert('Please fill everything before submiting..');
     }
+    })
 </script>
 
 
