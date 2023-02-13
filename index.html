@@ -325,6 +325,8 @@
 
 
 <script>
+    var text= document.querySelector('input').value;
+    if(text!=''){
     $("#submit-form").submit((e)=>{
         e.preventDefault()
         $.ajax({
@@ -342,6 +344,9 @@
             }
         })
     })
+    }else{
+        alert('Please fill everything before submiting..');
+    }
 </script>
 
 
